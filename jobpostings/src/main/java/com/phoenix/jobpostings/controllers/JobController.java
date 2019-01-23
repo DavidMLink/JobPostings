@@ -31,4 +31,9 @@ public class JobController {
         return "dashboard.html";
     }
 
+    @GetMapping(value = "/mySavedJobs")
+    public String getSavedJobs() {
+        return "mysavedjobs.html";
+    }
+
 }

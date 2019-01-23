@@ -26,4 +26,8 @@ public class UserController {
 
     // Start Here
     /* This should contain only login and registration... */
+    @GetMapping(value = "")
+    public String getDashboard() {
+        return "index.html";
+    }
 }
