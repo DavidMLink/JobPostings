@@ -103,16 +103,18 @@
 
 
 
-
+        
 
         <article>
             <p>Show: <a href="allJobsProcess">all jobs</a> or <a href="newestJobsProcess">newest jobs</a></p>
             <!-- FOR LOOP -->
-            <div id="jobPosting">
-                <h1><a href="">(Job Title)</a></h1>
-                <h3>(Company Name)</h3>
-                <h5><span class="grayfont">(Location)</span></h5>
-                <a href="saveJobProcess">Save Job</a>
+            <div th:each="job : ${allJobs}" id="jobPosting">
+                <h1><a th:text = "${job.title}">(Job Title)</a></h1>
+                <h3 th:text = "${job.company}">(Company Name)</h3>
+                <h5 th:text = "${job.location}"><span class="grayfont">(Location)</span></h5>
+                <a href="saveJobProcess">Save This Job</a>
+                <div></div>
+                
             </div>
             <!-- END OF FOR LOOP -->
         </article>

@@ -27,8 +27,13 @@ public class JobController {
 
     // Start Here
     @GetMapping(value = "")
-    public String getDashboard() {
+    public String getDashboard( Model model) {
+        List <Job> allJobs = jobService.allJobs();
+        model.addAttribute("allJobs", allJobs); 
         return "dashboard.html";
     }
+
+
+    
 
 }
