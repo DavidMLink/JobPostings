@@ -26,7 +26,7 @@ public class JobController {
     }
 
     // Start Here
-    @GetMapping(value = "")
+    @GetMapping(value = "/dashboard")
     public String getDashboard() {
         return "dashboard.html";
     }
